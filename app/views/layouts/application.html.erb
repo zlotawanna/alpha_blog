@@ -9,8 +9,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column">
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
     <%= yield %>
+    <footer id="sticky-footer" class="py-2 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; <%= link_to "Kram Perliczki", "https://www.facebook.com/kram.perliczki", class: "text-white" %></small>
+    </div>
+  </footer>
   </body>
 </html>

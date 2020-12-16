@@ -1,0 +1,47 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+  background-image: asset-url('nav-background.jpg');
+  font-family: 'Papyrus';
+  height: 60px;
+}
+.navbar-brand {
+  background-image: asset-url('logo-color.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px;
+  width: 210px;
+}
+
+.nav-link {
+color: black !important;
+}
+
+#home-container {
+  margin-top: 20px;
+}
+
+.jumbotron {
+  font-family: 'Papyrus';
+  background-image: asset-url('jumbotron-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: #4d3c48 !important;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+  background-color: #191418 !important;
+}
