@@ -24,11 +24,13 @@ color: black !important;
 
 .jumbotron {
   font-family: 'Papyrus';
-  background-image: asset-url('jumbotron-background.jpg');
+  background-color: lightgrey;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 425px;
+  margin-top: 20px;
+  margin-left: 80px;
 }
 
 html,
@@ -39,9 +41,14 @@ body {
 #page-content {
   flex: 1 0 auto;
   background-color: #4d3c48 !important;
+  font-family: 'Papyrus';
 }
 
 #sticky-footer {
   flex-shrink: none;
   background-color: #191418 !important;
+}
+
+.card {
+  background-color: lightgrey; 
 }
