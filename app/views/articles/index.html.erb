@@ -1,27 +1,26 @@
-
-  <h1 class="text-center mt-4 text-white">Articles</h1>
-  <div class="card-columns text-center mx-3">
-    <% @articles.each do |article| %>
-      <div class="card" >
-        <div class="card-header font-italic", style="height: 40px" >
-          by Perliczka
-        </div>
-        <div class="card-body">
-          <h5 class="card-title"><strong><%= article.title %></strong></h5>
-          <p class="card-text"><%= truncate(article.description, lenght: 100) %></p>
-          <p>
-            <%= link_to "More", article_path(article), class: "btn btn-dark" %>
-            <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-dark" %>
-            <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
-          </p>
-        </div>
-        <div class="card-footer font-italic" >
-          <small>Created <%= time_ago_in_words(article.created_at) %> ago,
-          edited <%= time_ago_in_words(article.updated_at) %></small>
-        </div>
+<h1 class="text-center mt-4 text-white">Articles</h1>
+<div class="card-columns text-center mx-3">
+  <% @articles.each do |article| %>
+    <div class="card" >
+      <div class="card-header font-italic", style="height: 40px" >
+        by Perliczka
       </div>
-    <% end %>
-  </div>
-  <div class="row justify-content-center" >
-    <%= link_to "+ Add new", new_article_path, class: "btn btn-dark" %>
-  </div>
+      <div class="card-body">
+        <h5 class="card-title"><strong><%= article.title %></strong></h5>
+        <p class="card-text"><%= truncate(article.description, lenght: 100) %></p>
+        <p>
+          <%= link_to "More", article_path(article), class: "btn btn-dark" %>
+          <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-dark" %>
+          <%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
+        </p>
+      </div>
+      <div class="card-footer font-italic" >
+        <small>Created <%= time_ago_in_words(article.created_at) %> ago,
+        edited <%= time_ago_in_words(article.updated_at) %></small>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="row justify-content-center" >
+  <%= link_to "+ Add new", new_article_path, class: "btn btn-dark" %>
+</div>
