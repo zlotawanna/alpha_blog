@@ -1,0 +1,16 @@
+<h2 class="text-center mt-4 text-black"><%= @user.username %></h2>
+<div class="card-columns text-center mx-3">
+  <div class="card text-left">
+    <div class="card-body">
+      <div class="card-text"><%= @user.email %></div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <%= link_to "Edit", edit_user_path(@user), class: "btn btn-secondary" %>
+        <%= link_to "Back to Cooks", users_path(@user), class: "btn btn-dark" %>
+      </div>
+      <div class="card-footer font-italic" >
+        <small><%= time_ago_in_words(@user.created_at) %> ago,
+        edited <%= time_ago_in_words(@user.updated_at) %></small>
+      </div>
+    </div>
+  </div>
+</div>
