@@ -1,28 +1,25 @@
-<h2 class="text-center mt-4 text-white"><%=@article.title %></h2>
+<h2 class="text-center mt-4 text-black"><%=@article.title %></h2>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10">
       <div class="card text-center">
-        <div class="card-header font-italic", style="height: 40px" >
-          by Perliczka
-        </div>
         <div class="card-body">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-secondary btn-sm" %>
+            <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger btn-sm" %>
+          </div>
           <div class="card-text text-left"><%= simple_format(@article.description) %></div>
-          <p>
-            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-outline-dark" %>
-            <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
-          </p>
-        </div>
-        <div class="card-footer font-italic" >
-          <small>Created <%= time_ago_in_words(@article.created_at) %> ago,
-          edited <%= time_ago_in_words(@article.updated_at) %></small>
+          <div class="card-footer font-italic" >
+            <small>Created by </small><strong><%= @article.user.username %></strong><br>
+            <small><%= time_ago_in_words(@article.created_at) %> ago,
+            edited <%= time_ago_in_words(@article.updated_at) %></small>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="form-group row justify-content-center">
+<div class="form-group row justify-content-center mt-3">
   <p>
-    <%= link_to 'Back to articles', articles_path, class: "btn btn-dark" %>
+    <%= link_to 'Back to recipes', articles_path, class: "btn btn-dark" %>
   </p>
 </div>

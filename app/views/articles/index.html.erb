@@ -15,7 +15,7 @@
         <%= link_to "More", article_path(article), class: "btn btn-dark" %>
       </div>
       <div class="card-footer font-italic" >
-        <small>Created by</small><br>
+        <small>Created by </small><strong><%= article.user.username %></strong><br>
         <small><%= time_ago_in_words(article.created_at) %> ago,
         edited <%= time_ago_in_words(article.updated_at) %></small>
       </div>
