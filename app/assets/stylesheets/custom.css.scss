@@ -1,21 +1,21 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-  background-image: asset-url('nav-background.jpg');
-  font-family: 'Papyrus';
-  height: 60px;
+  background-color: #FFFBF8 !important;
+  font-family: 'Quintessential';
+  height: 80px;
 }
 .navbar-brand {
-  background-image: asset-url('logo-color.jpg');
+  background-image: asset-url('logo-garlic.gif');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50px;
-  width: 210px;
+  height: 70px;
+  width: 70px;
 }
 
 .nav-link {
-color: black !important;
+  color: black !important;
 }
 
 #home-container {
@@ -23,14 +23,15 @@ color: black !important;
 }
 
 .jumbotron {
-  font-family: 'Papyrus';
-  background-color: lightgrey;
+  font-family: 'Quintessential';
+  background-image: asset-url('jumbotron-background-garlic-image.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 425px;
   margin-top: 20px;
   margin-left: 80px;
+  margin-right: 80px;
 }
 
 html,
@@ -40,15 +41,15 @@ body {
 
 #page-content {
   flex: 1 0 auto;
-  background-color: #4d3c48 !important;
-  font-family: 'Papyrus';
+  background-color: white !important;
+  font-family: 'Quintessential';
 }
 
 #sticky-footer {
   flex-shrink: none;
-  background-color: #191418 !important;
+  background-color: #44333D !important;
 }
 
 .card {
-  background-color: lightgrey; 
+  background-color: #FFEAEA;
 }

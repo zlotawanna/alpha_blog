@@ -3,29 +3,33 @@
  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
    <span class="navbar-toggler-icon"></span>
  </button>
-
  <div class="collapse navbar-collapse" id="navbarSupportedContent">
    <ul class="navbar-nav mr-auto">
      <li class="nav-item active">
        <%= link_to "About Us", about_path, class: "nav-link" %>
      </li>
      <li class="nav-item">
-       <a class="nav-link" href="#">Link</a>
+       <a class="nav-link" href="#">Cooks</a>
      </li>
      <li class="nav-item dropdown">
        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Articles
+         Recipes
        </a>
        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
+         <%= link_to "See All", articles_path, class: "dropdown-item" %>
          <div class="dropdown-divider"></div>
-         <%= link_to "Archive", articles_path, class: "dropdown-item" %>
+          <%= link_to "Create new recipe", new_article_path, class: "dropdown-item" %>
        </div>
      </li>
-     <li class="nav-item">
-       <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-     </li>
    </ul>
+   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+     <p class="nav-item">
+       <a class="nav-link" href="#">Sign In</a>
+     </p>
+     <p class="nav-item">
+       <a class="nav-link" href="#">Log In</a>
+     </p>
+   </div>
    <form class="form-inline my-2 my-lg-0">
      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
