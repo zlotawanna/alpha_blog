@@ -25,7 +25,10 @@
    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
        <%= link_to "Sign Up", signup_path, class: "nav-link" %>
      <p class="nav-item">
-       <a class="nav-link" href="#">Log In</a>
+       <%= link_to "Log In", login_path, class: "nav-link" %>
+     </p>
+     <p class="nav-item">
+       <%= link_to "Log Out", logout_path, class: "nav-link", method: :delete %>
      </p>
    </div>
    <form class="form-inline my-2 my-lg-0">
