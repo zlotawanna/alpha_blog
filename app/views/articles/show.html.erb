@@ -5,8 +5,10 @@
       <div class="card text-center">
         <div class="card-body">
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <%= link_to "Edit", edit_article_path(@article), class: "btn btn-secondary btn-sm" %>
-            <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger btn-sm" %>
+            <% if logged_in? && @article.user == current_user %>
+              <%= link_to "Edit", edit_article_path(@article), class: "btn btn-secondary btn-sm" %>
+              <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger btn-sm" %>
+            <% end %>
           </div>
           <div class="card-text text-left"><%= simple_format(@article.description) %></div>
           <div class="card-footer font-italic" >
@@ -16,10 +18,11 @@
           </div>
         </div>
       </div>
+      <div class="form-group row justify-content-center mt-3">
+        <p>
+          <%= link_to 'Back to recipes', articles_path, class: "btn btn-dark" %>
+        </p>
+      </div>
     </div>
   </div>
-<div class="form-group row justify-content-center mt-3">
-  <p>
-    <%= link_to 'Back to recipes', articles_path, class: "btn btn-dark" %>
-  </p>
 </div>
