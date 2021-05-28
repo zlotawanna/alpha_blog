@@ -2,8 +2,8 @@
 <div class="card-body text-center">
   <%= @user.email %>
   <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2">
-    <% if logged_in? && @user == current_user %>
-      <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-secondary btn-sm" %>
+    <% if logged_in? && (@user == current_user || current_user.admin?)%>
+      <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-secondary mr-1" %>
       <%= link_to "Delete account", user_path(@user), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %>
     <% end %>
   </div>
