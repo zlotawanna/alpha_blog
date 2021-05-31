@@ -52,6 +52,8 @@ body {
 
 .card {
   background-color: #FFEAEA;
+  badge-color: #44333D;
+  badge-font-size: .175em;
 }
 
 .flickr_pagination {
@@ -84,3 +86,7 @@ body {
     margin-right: 1em; }
   .flickr_pagination .next_page {
     margin-left: 1em; }
+
+.badge {
+
+}

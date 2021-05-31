@@ -1,9 +1,19 @@
 <h1 class="text-center mt-4 text-black">Categories</h1>
+<div class="justify-content-md-endt ml-3" >
+  <% if logged_in? && current_user.admin? %>
+    <%= link_to "+ Add new category", new_category_path, class: "btn btn-success mb-3" %>
+  <% end %>
+</div>
 <div class="card-columns text-center mx-3">
   <% @categories.each do |category| %>
     <div class="card text-left">
       <div class="card-body">
         <h5 class="card-title"><strong><%= category.name %></strong></h5>
+        <h5 class="card-text"><%= pluralize(category.articles.count, "recipe") %></h5>
+        <%= link_to "See recipes", category_path(category), class: "btn btn-dark" %>
+        <% if logged_in? && current_user.admin? %>
+          <%= link_to "Edit category name", edit_category_path(category), class: "btn btn-secondary" %>
+        <% end %>
       </div>
       <div class="card-footer font-italic" >
         <small>Created <%= time_ago_in_words(category.created_at) %> ago,
